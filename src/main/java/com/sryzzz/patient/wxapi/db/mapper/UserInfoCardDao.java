@@ -11,5 +11,12 @@ import com.sryzzz.patient.wxapi.db.entity.UserInfoCard;
  * @description UserInfoCardDao
  */
 public interface UserInfoCardDao extends BaseMapper<UserInfoCard> {
-    
+
+    /**
+     * 通过 userId 查询患者手机号
+     *
+     * @param userId 患者标识id
+     * @return 手机号
+     */
+    String searchUserTel(int userId);
 }
