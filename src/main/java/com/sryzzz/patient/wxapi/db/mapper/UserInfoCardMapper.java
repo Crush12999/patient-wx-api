@@ -10,7 +10,7 @@ import com.sryzzz.patient.wxapi.db.entity.UserInfoCard;
  * @create 2022/11/12 21:20
  * @description UserInfoCardDao
  */
-public interface UserInfoCardDao extends BaseMapper<UserInfoCard> {
+public interface UserInfoCardMapper extends BaseMapper<UserInfoCard> {
 
     /**
      * 通过 userId 查询患者手机号
