@@ -19,4 +19,11 @@ public interface UserInfoCardMapper extends BaseMapper<UserInfoCard> {
      * @return 手机号
      */
     String searchUserTel(int userId);
+
+    /**
+     * 创建患者信息卡
+     *
+     * @param entity 患者信息卡信息
+     */
+    void insertUserInfoCard(UserInfoCard entity);
 }

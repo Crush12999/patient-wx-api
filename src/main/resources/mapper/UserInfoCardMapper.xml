@@ -9,4 +9,19 @@
         WHERE "user_id" = ${userId}
             LIMIT 1
     </select>
+
+    <!-- 创建患者信息卡 -->
+    <insert id="insertUserInfoCard" parameterType="com.sryzzz.patient.wxapi.db.entity.UserInfoCard">
+        UPSERT INTO HOSPITAL.PATIENT_USER_INFO_CARD(
+        "id",
+        "user_id", "uuid", "name", "sex", "pid",
+        "tel", "birthday", "medical_history", "insurance_type"
+    )
+    VALUES (
+        NEXT VALUE FOR HOSPITAL.PATIENT_USER_INFO_CARD_SEQUENCE,
+        ${userId}, #{uuid}, #{name}, #{sex}, #{pid},
+        #{tel}, #{birthday}, #{medicalHistory}, #{insuranceType}
+        )
+    </insert>
+
 </mapper>
